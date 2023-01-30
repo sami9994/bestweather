@@ -6,12 +6,29 @@
   height: 3em;
   max-height: 52px;
   .main-header {
-    background-color: yellow;
     margin: 0.5em auto;
     width: 80vw;
     height: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+  .search-field {
+    .search-form {
+      display: flex;
+      .search-btn {
+        color: rgb(67, 70, 71);
+        background-color: rgb(245, 245, 245);
+        border: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .input-search-field {
+        border: none;
+        border-radius: 5px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
   }
 }
