@@ -1,0 +1,16 @@
+.header {
+  background-color: red;
+  width: 100%;
+  position: fixed;
+  height: 3em;
+  max-height: 52px;
+}
+.header .main-header {
+  background-color: yellow;
+  margin: 0.5em auto;
+  width: 80vw;
+  height: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}/*# sourceMappingURL=Header.css.map */
