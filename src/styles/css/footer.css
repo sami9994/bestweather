@@ -1,5 +1,20 @@
 .footer-section {
+  position: absolute;
+  height: 100%;
   width: 100%;
   height: 15em;
-  background-color: BLUE;
+  background-color: rgba(250, 171, 1, 0.589);
+}
+.footer-section .footer-centre {
+  color: white;
+  background: rgba(223, 214, 214, 0.644);
+  margin: 2em auto;
+  width: 70vw;
+  padding: 2em;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+.footer-section .footer-centre .rights-section .rights-sentence {
+  font-weight: 400;
 }/*# sourceMappingURL=footer.css.map */

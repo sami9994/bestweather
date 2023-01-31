@@ -12,11 +12,11 @@ function App() {
   //   .then((res) => console.log(res.data))
   //   .catch((e) => console.log(e))
   return (
-    <div>
+    <main>
       <Header />
       <MainContent />
       <Footer />
-    </div>
+    </main>
   )
 }
 

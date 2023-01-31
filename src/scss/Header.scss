@@ -1,24 +1,43 @@
-.header {
-  background-color: red;
+@import './utils';
+.header-section {
+  background-color: $header-bg;
   width: 100%;
-  position: fixed;
-
-  height: 3em;
+  // position: fixed;
+  height: 4em;
   max-height: 52px;
   .main-header {
-    margin: 0.5em auto;
-    width: 80vw;
-    height: 60%;
+    background: rgba(223, 214, 214, 0.644);
+    margin: auto;
+    padding-top: 0.1em;
+    width: $main-width;
+    height: 80%;
     display: flex;
+
     justify-content: space-around;
-    align-items: center;
+
+    align-items: baseline;
+    .title {
+      color: white;
+
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+
+      .title-header {
+        font-size: 1em;
+      }
+    }
   }
+
   .search-field {
+    width: 30%;
+
     .search-form {
       display: flex;
+
       .search-btn {
-        color: rgb(67, 70, 71);
-        background-color: rgb(245, 245, 245);
+        color: $yellow;
+        background-color: $white;
         border: none;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -28,6 +47,22 @@
         border-radius: 5px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        color: $yellow;
+        padding-left: 2px;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        caret-color: $yellow underscore;
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          padding-left: 2px;
+          color: $yellow;
+          font-weight: bold;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          letter-spacing: $letter-space;
+        }
       }
     }
   }

@@ -1,5 +1,23 @@
+@import './utils';
 .footer-section {
+  position: absolute;
+  height: 100%;
   width: 100%;
   height: 15em;
-  background-color: BLUE;
+  background-color: $footer-bg;
+  .footer-centre {
+    color: $white;
+    background: rgba(223, 214, 214, 0.644);
+    margin: 2em auto;
+    width: $main-width;
+    padding: 2em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    .rights-section {
+      .rights-sentence {
+        font-weight: 400;
+      }
+    }
+  }
 }
