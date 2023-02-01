@@ -37,6 +37,9 @@
       .humidity,
       .wind,
       .temp {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         background-color: cadetblue;
         margin: 0 1px;
         height: 100%;

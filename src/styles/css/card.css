@@ -6,6 +6,8 @@
   margin-left: 1em;
 }
 .card-content .card-main-content {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 .card-content .card-main-content .icon-main-desc {
@@ -38,6 +40,9 @@
 .card-content .card-main-content .humidity-heat-wind-desc .humidity,
 .card-content .card-main-content .humidity-heat-wind-desc .wind,
 .card-content .card-main-content .humidity-heat-wind-desc .temp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   background-color: cadetblue;
   margin: 0 1px;
   height: 100%;

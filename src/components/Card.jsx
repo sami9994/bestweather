@@ -11,10 +11,19 @@ const Card = () => {
             alt='icon'
             className='icon'
           />
-          <h1 className='main-title'>Description</h1>
+          <h1 className='main-title'>Drizzle</h1>
         </section>
         <section className='humidity-heat-wind-desc'>
-          <section className='humidity'></section>
+          <section className='humidity'>
+            <p>💧</p>
+            <p>{response.main.humidity}</p>
+            <img
+              src='../../icons/mine/atmospheric-pressure-50.png'
+              height={'30px'}
+              width='30px'
+            />
+            <p>{response.main.pressure}</p>
+          </section>
           <section className='wind'></section>
           <section className='temp'></section>
         </section>
