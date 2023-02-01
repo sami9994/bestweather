@@ -6,7 +6,16 @@
   .main-content {
     margin: auto;
     width: $main-width;
-    background-color: rgba(238, 235, 235, 0.233);
+    background-color: rgb(206, 49, 49);
     height: 70vh;
+
+    .daily-section {
+      display: flex;
+      padding-top: 1em;
+      padding-left: 0.1em;
+      padding-bottom: 0.5em;
+
+      overflow-x: scroll;
+    }
   }
 }

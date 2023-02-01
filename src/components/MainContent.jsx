@@ -5,13 +5,14 @@ import Header from './header'
 const MainContent = () => {
   return (
     <div className='main-div'>
-      <section className='main-content'>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </section>
+      <div className='main-content'>
+        <section className='daily-section'>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </section>
+      </div>
     </div>
   )
 }

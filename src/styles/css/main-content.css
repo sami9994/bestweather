@@ -6,6 +6,13 @@
 .main-div .main-content {
   margin: auto;
   width: 70vw;
-  background-color: rgba(238, 235, 235, 0.233);
+  background-color: rgb(206, 49, 49);
   height: 70vh;
+}
+.main-div .main-content .daily-section {
+  display: flex;
+  padding-top: 1em;
+  padding-left: 0.1em;
+  padding-bottom: 0.5em;
+  overflow-x: scroll;
 }/*# sourceMappingURL=main-content.css.map */

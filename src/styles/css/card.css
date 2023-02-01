@@ -1,0 +1,45 @@
+.card-content {
+  border-radius: 10px;
+  width: 15rem;
+  height: 20em;
+  background-color: aquamarine;
+  margin-left: 1em;
+}
+.card-content .card-main-content {
+  height: fit-content;
+}
+.card-content .card-main-content .icon-main-desc {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-content .card-main-content .icon-main-desc .icon {
+  width: 4em;
+  max-width: 100px;
+  min-width: 50px;
+}
+.card-content .card-main-content .icon-main-desc .main-title {
+  color: rgb(158, 43, 43);
+  font-size: medium;
+  font-style: italic;
+}
+.card-content .card-main-content .humidity-heat-wind-desc {
+  background-color: bisque;
+  padding: 0 0.1em;
+  width: 100%;
+  height: 8em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.card-content .card-main-content .humidity-heat-wind-desc .humidity,
+.card-content .card-main-content .humidity-heat-wind-desc .wind,
+.card-content .card-main-content .humidity-heat-wind-desc .temp {
+  background-color: cadetblue;
+  margin: 0 1px;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=card.css.map */
