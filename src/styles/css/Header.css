@@ -51,20 +51,6 @@
 .header-section .search-field .search-form .input-search-field:focus {
   outline: none;
 }
-.header-section .search-field .search-form .input-search-field::-moz-placeholder {
-  padding-left: 2px;
-  color: rgb(245, 210, 13);
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.5px;
-}
-.header-section .search-field .search-form .input-search-field:-ms-input-placeholder {
-  padding-left: 2px;
-  color: rgb(245, 210, 13);
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.5px;
-}
 .header-section .search-field .search-form .input-search-field::placeholder {
   padding-left: 2px;
   color: rgb(245, 210, 13);

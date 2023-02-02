@@ -11,6 +11,9 @@ const MainContent = () => {
           <Card />
           <Card />
           <Card />
+          <Card />
+          <Card />
+          <Card />
         </section>
       </div>
     </div>
