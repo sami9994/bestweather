@@ -1,7 +1,7 @@
-import response from '../res'
+import response from '../currentRes'
 import '../styles/css/card.css'
 const Card = () => {
-  console.log(response)
+  // console.log(response)
   return (
     <div className='card-content'>
       <div className='card-main-content'>

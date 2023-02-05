@@ -1,0 +1,77 @@
+@import './utils';
+.current-main-section {
+  margin: 0 auto;
+  width: 75%;
+  display: grid;
+  background: #000;
+  height: 100%;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+
+  .icon-desc {
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 0, 0.737);
+    .current-icon {
+      min-width: 20px;
+      width: 3em;
+      max-width: 54px;
+
+      height: auto;
+    }
+    .current-desc {
+      font-size: small;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: $edu-font;
+      color: $font-color-yellow;
+      align-self: center;
+      justify-self: flex-start;
+    }
+    .current-main {
+      @extend .current-desc;
+      font-size: large;
+    }
+  }
+  .city-date-time {
+    padding: 0.2em 0.9em;
+    grid-column: 2/-1;
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    background-color: chocolate;
+    .current-city {
+      font-size: 1.2em;
+
+      font-family: $edu-font;
+    }
+    .current-date,
+    .current-time {
+      font-size: small;
+      font-weight: bold;
+      text-transform: capitalize;
+      font-family: $edu-font;
+      color: $font-color-yellow;
+    }
+  }
+  .humidity-wind-temp {
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: crimson;
+    .current-humidity {
+      display: flex;
+    }
+    .current-wind {
+      display: flex;
+    }
+    .current-temp {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
+}

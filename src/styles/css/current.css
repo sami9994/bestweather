@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
+.current-main-section {
+  margin: 0 auto;
+  width: 75%;
+  display: grid;
+  background: #000;
+  height: 100%;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+}
+.current-main-section .icon-desc {
+  grid-row: 1/-1;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  justify-content: center;
+  background-color: rgba(0, 128, 0, 0.737);
+}
+.current-main-section .icon-desc .current-icon {
+  min-width: 20px;
+  width: 3em;
+  max-width: 54px;
+  height: auto;
+}
+.current-main-section .icon-desc .current-desc, .current-main-section .icon-desc .current-main {
+  font-size: small;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Edu QLD Beginner", cursive;
+  color: rgb(187, 224, 65);
+  align-self: center;
+  justify-self: flex-start;
+}
+.current-main-section .icon-desc .current-main {
+  font-size: large;
+}
+.current-main-section .city-date-time {
+  padding: 0.2em 0.9em;
+  grid-column: 2/-1;
+  display: grid;
+  justify-content: start;
+  align-content: center;
+  background-color: chocolate;
+}
+.current-main-section .city-date-time .current-city {
+  font-size: 1.2em;
+  font-family: "Edu QLD Beginner", cursive;
+}
+.current-main-section .city-date-time .current-date,
+.current-main-section .city-date-time .current-time {
+  font-size: small;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Edu QLD Beginner", cursive;
+  color: rgb(187, 224, 65);
+}
+.current-main-section .humidity-wind-temp {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: crimson;
+}
+.current-main-section .humidity-wind-temp .current-humidity {
+  display: flex;
+}
+.current-main-section .humidity-wind-temp .current-wind {
+  display: flex;
+}
+.current-main-section .humidity-wind-temp .current-temp {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}/*# sourceMappingURL=current.css.map */

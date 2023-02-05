@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
 .header-section {
   background-color: rgba(250, 171, 1, 0.664);
   width: 100%;
@@ -8,7 +9,7 @@
   background: rgba(223, 214, 214, 0.644);
   margin: auto;
   padding-top: 0.1em;
-  width: 70vw;
+  width: 85vw;
   height: 80%;
   display: flex;
   justify-content: space-around;
@@ -50,6 +51,20 @@
 }
 .header-section .search-field .search-form .input-search-field:focus {
   outline: none;
+}
+.header-section .search-field .search-form .input-search-field::-moz-placeholder {
+  padding-left: 2px;
+  color: rgb(245, 210, 13);
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.5px;
+}
+.header-section .search-field .search-form .input-search-field:-ms-input-placeholder {
+  padding-left: 2px;
+  color: rgb(245, 210, 13);
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.5px;
 }
 .header-section .search-field .search-form .input-search-field::placeholder {
   padding-left: 2px;

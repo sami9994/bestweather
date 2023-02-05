@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
 .footer-section {
   position: absolute;
   height: 100%;
@@ -9,7 +10,7 @@
   color: white;
   background: rgba(223, 214, 214, 0.644);
   margin: 2em auto;
-  width: 70vw;
+  width: 85vw;
   padding: 2em;
   display: flex;
   flex-direction: row-reverse;
