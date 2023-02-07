@@ -8,8 +8,6 @@ import {
   faTemperatureHalf,
   faTemperatureArrowUp,
   faTemperatureArrowDown,
-  faPercentage,
-  faDroplet,
   faWind,
 } from '@fortawesome/free-solid-svg-icons'
 import currentRes from '../currentRes'
@@ -21,12 +19,14 @@ const Current = () => {
     <div className='current-main-section'>
       <section className='icon-desc'>
         <img
-          src='../../icons/different/02d.png'
+          src={`../../icons/different/${currentRes.weather[0].icon}.png`}
           alt='icon'
           className='current-icon'
         />
-        <h4 className='current-main'>{currentRes.weather[0].main}</h4>
-        <p className='current-desc'>{currentRes.weather[0].description}</p>
+        <section className='current-desc-main'>
+          <h4 className='current-main'>{currentRes.weather[0].main}</h4>
+          <p className='current-desc'>{currentRes.weather[0].description}</p>
+        </section>
       </section>
       <section className='city-date-time'>
         <h4 className='current-city'>{currentRes.name}</h4>

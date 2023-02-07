@@ -11,18 +11,22 @@
 .current-main-section .icon-desc {
   grid-row: 1/-1;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
-  justify-content: center;
+  grid-template-rows: 1fr 1fr;
   border-right: 1px solid rgb(245, 210, 13);
 }
 .current-main-section .icon-desc .current-icon {
+  justify-self: center;
+  align-self: center;
   min-width: 20px;
   width: 3em;
   max-width: 54px;
   height: auto;
 }
-.current-main-section .icon-desc .current-desc, .current-main-section .icon-desc .current-main {
+.current-main-section .icon-desc .current-desc-main {
+  justify-self: center;
+  align-self: self-start;
+}
+.current-main-section .icon-desc .current-desc-main .current-desc, .current-main-section .icon-desc .current-desc-main .current-main {
   font-size: small;
   font-weight: bold;
   text-transform: capitalize;
@@ -31,7 +35,7 @@
   align-self: center;
   justify-self: flex-start;
 }
-.current-main-section .icon-desc .current-main {
+.current-main-section .icon-desc .current-desc-main .current-main {
   font-size: large;
 }
 .current-main-section .city-date-time {
