@@ -21,7 +21,7 @@ function App() {
   //   .catch((e) => console.log(e))
 
   return (
-    <main>
+    <main className='main'>
       <Header />
       <MainContent />
       <Footer />

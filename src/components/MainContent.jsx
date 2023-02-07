@@ -12,6 +12,11 @@ const MainContent = () => {
         </section>
         <section className='daily-section'>
           <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </section>
       </div>
     </div>
