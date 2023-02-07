@@ -1,69 +1,65 @@
 import response from '../currentRes'
 import '../styles/css/card.css'
-const Card = () => {
-  // console.log(response)
+import calcDate from '../utils'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDrupal } from '@fortawesome/free-brands-svg-icons'
+import {
+  faTemperatureHalf,
+  faVialCircleCheck,
+  faGaugeSimpleHigh,
+  faCircleChevronDown,
+} from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
+const Card = ({ item, sunrise, sunset }) => {
+  let date = calcDate(item.dt).replace(' ', '')
   return (
     <div className='card-content'>
       <div className='card-main-content'>
         <section className='icon-main-desc'>
           <img
-            src={`../../icons/different/${'09d'}.png`}
+            src={`../../icons/different/${item.weather[0].icon}.png`}
             alt='icon'
             className='icon'
           />
-          <h1 className='main-title'>{response.weather[0].main}</h1>
-        </section>
-        <section className='humidity-heat-wind-desc'>
-          <section className='humidity'>
-            <span>💧</span>
-            <p>{response.main.humidity}</p>
+          <section className='main-desc-date'>
+            <h1 className='main-title'>{item.weather[0].main}</h1>
 
-            <p>
-              {response.main.pressure}{' '}
-              <span>
-                {' '}
-                <img
-                  src='../../icons/mine/atmospheric-pressure-50.png'
-                  height={'10px'}
-                  width='10px'
-                />
-              </span>
-            </p>
-          </section>
-          <section className='wind'>
-            <img
-              src='../../icons/mine/wind-speed.png'
-              alt='wind-speed'
-              height={'20px'}
-              width='20px'
-            />
-            <p>{response.wind.speed} km</p>
-            <p>
-              {response.wind.deg}{' '}
-              <span>
-                <img
-                  src='../../icons/mine/wind-direction.png'
-                  alt=''
-                  height='10px'
-                  width='10px'
-                />
-              </span>
-            </p>
-          </section>
-          <section className='temp'>
-            <img
-              src='../../icons/mine/thermometer.png'
-              alt='temp'
-              height={'20px'}
-              width='20px'
-            />
-            <p>{response.main.temp_max}</p>
-            <p>{response.main.temp_min}</p>
+            <p className='main-desc'>{item.weather[0].description}</p>
+            <p className='main-date'>{date}</p>
           </section>
         </section>
-        <section className='desc'>
-          <p>{new Date(response.dt * 1000).toLocaleString()}</p>
-          <p className='explanation'>{response.weather[0].description}</p>
+        <section className='humidity-temp'>
+          <section className='temp'>
+            <FontAwesomeIcon icon={faTemperatureHalf} />
+            <p>{item.main.temp}C</p>
+          </section>
+          <section className='temp-like'>
+            <FontAwesomeIcon icon={faVialCircleCheck} />
+            <p>{item.main.feels_like}C</p>
+          </section>
+          <section className='humidity'>
+            <FontAwesomeIcon icon={faDrupal} />
+            <p>{item.main.humidity}%</p>
+          </section>
+        </section>
+        <section className='wind-sunrise'>
+          <section className='wind icon'>
+            <h4>
+              <FontAwesomeIcon icon={faGaugeSimpleHigh} /> {item.wind.speed}
+            </h4>
+            <h4>
+              {' '}
+              <FontAwesomeIcon icon={faCircleChevronDown} /> {item.wind.deg}
+            </h4>
+          </section>
+          <section className='sunrise'>
+            <p>
+              <FontAwesomeIcon icon={faSun} /> {calcDate(sunrise).split(',')[1]}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faMoon} /> {calcDate(sunset).split(',')[1]}
+            </p>
+          </section>
         </section>
       </div>
     </div>

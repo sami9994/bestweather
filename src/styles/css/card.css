@@ -1,70 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
 .card-content {
-  border-radius: 10px;
+  border-radius: 20px;
   width: 15rem;
-  height: 20em;
+  height: 20rem;
   background-color: rgb(243, 247, 245);
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 .card-content .card-main-content {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
 }
 .card-content .card-main-content .icon-main-desc {
-  width: 100%;
-  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  justify-content: space-around;
-  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-bottom: 1px dashed rgb(245, 210, 13);
+  width: 100%;
+  overflow: hidden;
 }
 .card-content .card-main-content .icon-main-desc .icon {
-  width: 4em;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+  width: 100%;
   max-width: 100px;
   min-width: 50px;
 }
-.card-content .card-main-content .icon-main-desc .main-title {
+.card-content .card-main-content .icon-main-desc .main-desc-date {
+  padding-top: 1em;
+  padding-left: 0.2em;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+}
+.card-content .card-main-content .icon-main-desc .main-desc-date .main-title {
   color: rgb(158, 43, 43);
   font-size: medium;
   font-style: italic;
 }
-.card-content .card-main-content .humidity-heat-wind-desc {
-  padding: 0 0.5em;
+.card-content .card-main-content .icon-main-desc .main-desc-date .main-desc {
+  align-self: baseline;
+  justify-self: center;
+  color: rgb(245, 210, 13);
+  font-weight: bolder;
+  font-size: 0.7rem;
+}
+.card-content .card-main-content .icon-main-desc .main-desc-date .main-date {
+  color: rgb(0, 68, 255);
+  align-self: baseline;
+  justify-self: end;
+  font-size: 0.5rem;
+}
+.card-content .card-main-content .humidity-temp {
+  padding: 0.4em 0.5em;
   width: 100%;
   height: 8em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 3px;
 }
-.card-content .card-main-content .humidity-heat-wind-desc .humidity,
-.card-content .card-main-content .humidity-heat-wind-desc .wind,
-.card-content .card-main-content .humidity-heat-wind-desc .temp {
+.card-content .card-main-content .humidity-temp .temp,
+.card-content .card-main-content .humidity-temp .humidity,
+.card-content .card-main-content .humidity-temp .temp-like {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  align-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+  color: rgb(231, 84, 4);
+  font-family: "Edu QLD Beginner", cursive;
   justify-items: center;
-  background-color: rgba(23, 24, 24, 0.432);
-  margin: 0 1px;
-  border-radius: 5px;
-  color: white;
-  height: 100%;
-  width: 100%;
-  box-shadow: 12px 12px 15px 1px rgba(0, 17, 255, 0.151);
 }
-.card-content .card-main-content .humidity-heat-wind-desc .humidity p:nth-child(3),
-.card-content .card-main-content .humidity-heat-wind-desc .wind p:nth-child(3),
-.card-content .card-main-content .humidity-heat-wind-desc .temp p:nth-child(3) {
-  font-size: 10px;
+.card-content .card-main-content .wind-sunrise {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-content: center;
+  padding-bottom: 0.5em;
 }
-.card-content .card-main-content .desc {
-  width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  margin: 2em 0px;
-}
-.card-content .card-main-content .desc .explanation {
-  width: 30ch;
+.card-content .card-main-content .wind-sunrise .sunrise, .card-content .card-main-content .wind-sunrise .wind {
+  color: rgb(231, 84, 4);
 }/*# sourceMappingURL=card.css.map */

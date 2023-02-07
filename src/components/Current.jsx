@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/css/current.css'
-import ThermostatAutoIcon from '@mui/icons-material/ThermostatAuto'
-import InvertColorsIcon from '@mui/icons-material/InvertColors'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDrupal } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -11,10 +10,9 @@ import {
   faWind,
 } from '@fortawesome/free-solid-svg-icons'
 import currentRes from '../currentRes'
+import calcDate from '../utils'
 const Current = () => {
-  var date = new Date(currentRes.dt * 1000).toLocaleString()
-  let [time, formattedDate] = date.split(',')
-  console.log(time, formattedDate)
+  let [time, formattedDate] = calcDate(currentRes.dt).split(',')
   return (
     <div className='current-main-section'>
       <section className='icon-desc'>

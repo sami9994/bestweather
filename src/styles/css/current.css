@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
 .current-main-section {
+  border-radius: 20px;
   margin: 0 auto;
   width: 75%;
   display: grid;
@@ -56,7 +57,7 @@
   font-weight: bold;
   text-transform: capitalize;
   font-family: "Edu QLD Beginner", cursive;
-  color: rgb(231, 84, 4);
+  color: rgb(0, 68, 255);
 }
 .current-main-section .humidity-wind-temp {
   grid-column: 2/-1;

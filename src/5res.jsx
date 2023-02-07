@@ -17,6 +17,7 @@ export default {
         temp_kf: -1.11,
       },
       weather: [
+        //ok
         {
           id: 500,
           main: 'Rain',

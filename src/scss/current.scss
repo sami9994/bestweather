@@ -1,6 +1,8 @@
 @import './utils';
 .current-main-section {
+  border-radius: 20px;
   margin: 0 auto;
+
   width: 75%;
   display: grid;
   background: #f3e4e4ae;
@@ -60,7 +62,7 @@
       font-weight: bold;
       text-transform: capitalize;
       font-family: $edu-font;
-      color: $font-color-yellow;
+      color: $font-date-color;
     }
   }
   .humidity-wind-temp {
