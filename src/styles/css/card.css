@@ -5,6 +5,7 @@
   height: 20rem;
   background-color: rgb(243, 247, 245);
   margin-left: 0.5em;
+  transition: all 0.6s 0.3s linear;
 }
 .card-content .card-main-content {
   height: 100%;
@@ -78,4 +79,11 @@
 }
 .card-content .card-main-content .wind-sunrise .sunrise, .card-content .card-main-content .wind-sunrise .wind {
   color: rgb(231, 84, 4);
+}
+
+.card-content:hover {
+  box-shadow: 6px 9px 25px 4px rgb(208, 215, 192);
+  -webkit-box-shadow: 6px 9px 25px 4px rgb(208, 215, 192);
+  -moz-box-shadow: 6px 9px 25px 4px rgb(208, 215, 192);
+  transform: scale(1.0001);
 }/*# sourceMappingURL=card.css.map */

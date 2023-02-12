@@ -38,14 +38,7 @@ const Current = () => {
             {/* <FontAwesomeIcon icon='fa-regular fa-bed-front' /> */}
           </span>
           <section className='current-temperatures'>
-            <p>
-              <FontAwesomeIcon icon={faTemperatureArrowUp} />{' '}
-              {currentRes.main.temp_max}
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faTemperatureArrowDown} />{' '}
-              {currentRes.main.temp_min}
-            </p>
+            <p>{currentRes.main.temp}</p>
           </section>
         </section>
         <section className='current-humidity'>

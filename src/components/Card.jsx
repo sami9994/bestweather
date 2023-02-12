@@ -45,7 +45,7 @@ const Card = ({ item, sunrise, sunset }) => {
         <section className='wind-sunrise'>
           <section className='wind icon'>
             <h4>
-              <FontAwesomeIcon icon={faGaugeSimpleHigh} /> {item.wind.speed}
+              <FontAwesomeIcon icon={faGaugeSimpleHigh} /> {item.wind.speed}KM
             </h4>
             <h4>
               {' '}

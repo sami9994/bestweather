@@ -5,6 +5,8 @@
   height: 20rem;
   background-color: rgb(243, 247, 245);
   margin-left: 0.5em;
+
+  transition: $main-transition;
   .card-main-content {
     height: 100%;
     border-radius: 20px;
@@ -89,4 +91,10 @@
       }
     }
   }
+}
+.card-content:hover {
+  box-shadow: 6px 9px 25px 4px rgba(208, 215, 192, 1);
+  -webkit-box-shadow: 6px 9px 25px 4px rgba(208, 215, 192, 1);
+  -moz-box-shadow: 6px 9px 25px 4px rgba(208, 215, 192, 1);
+  transform: scale(1.0001);
 }
