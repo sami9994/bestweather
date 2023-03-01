@@ -1,0 +1,10 @@
+@import './utils';
+.main-map {
+  width: 100%;
+  height: max-content;
+  min-height: min-content;
+  .map-content {
+    width: $main-width;
+    margin: 0 auto;
+  }
+}

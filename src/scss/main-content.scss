@@ -9,20 +9,53 @@
     width: $main-width;
 
     height: max-content;
+
     .current-details {
       width: 100%;
       height: auto;
-      padding: 0 1em;
+      padding-top: 1em;
     }
+
     .daily-section {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       margin-top: 1em;
-
-      padding: 0.1em 0.1em 0.5em 0.1em;
-
       overflow-x: auto;
+      padding: 0.1em 0.1em 0.5em 0.1em;
     }
     @include scrollbar;
+  }
+}
+@include m {
+  .main-div {
+    width: 100%;
+    height: auto;
+    background-color: $bg;
+    margin-bottom: 2px;
+    .main-content {
+      margin: auto;
+      width: $main-width;
+
+      height: max-content;
+
+      .current-details {
+        width: 100%;
+        height: auto;
+        padding-top: 1em;
+      }
+
+      .daily-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 1em;
+
+        padding: 0.1em 0.1em 0.5em 0.1em;
+
+        overflow-x: auto;
+      }
+      @include scrollbar;
+    }
   }
 }

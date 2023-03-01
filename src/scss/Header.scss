@@ -1,37 +1,40 @@
 @import './utils';
+
 .header-section {
   background-color: $header-bg;
   width: 100%;
+  min-width: $min-width;
   // position: fixed;
   height: 4em;
-  max-height: 52px;
+  max-height: 60px;
   .main-header {
     background: rgba(223, 214, 214, 0.644);
-    margin: auto;
-    padding-top: 0.1em;
+    margin-inline: auto;
+    // padding-top: 0.1em;
     width: $main-width;
-    height: 80%;
+    min-width: $min-width;
+    height: 100%;
     display: flex;
-
+    border-radius: $border-radios;
+    align-content: center;
     justify-content: space-around;
 
-    align-items: baseline;
+    align-items: center;
     .title {
       color: white;
-
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
-
       .title-header {
-        font-size: 1em;
+        font-size: 0.8em;
       }
     }
   }
 
   .search-field {
-    width: 30%;
+    width: 60%;
 
+    min-width: 250px;
     .search-form {
       display: flex;
 
@@ -57,11 +60,71 @@
           outline: none;
         }
         &::placeholder {
-          padding-left: 2px;
+          padding-left: 1px;
+          font-size: smaller;
           color: $yellow;
           font-weight: bold;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           letter-spacing: $letter-space;
+        }
+      }
+    }
+  }
+}
+
+@include m {
+  .header-section {
+    // position: fixed;
+    height: 4em;
+    max-height: 80px;
+    .main-header {
+      width: $main-width;
+      max-width: 500px;
+
+      display: flex;
+
+      .title {
+        .title-header {
+          font-size: 1em;
+        }
+      }
+    }
+
+    .search-field {
+      width: 60%;
+
+      .search-form {
+        display: flex;
+      }
+    }
+  }
+}
+@include l {
+  .header-section {
+    // position: fixed;
+    height: 4em;
+    max-height: 80px;
+    .main-header {
+      width: $main-width;
+      max-width: 800px;
+
+      display: flex;
+
+      .title {
+        .title-header {
+          font-size: 1.1em;
+        }
+      }
+    }
+
+    .search-field {
+      width: 50%;
+      max-width: 500px;
+
+      .search-form {
+        display: flex;
+        .input-search-field::placeholder {
+          font-size: medium;
         }
       }
     }

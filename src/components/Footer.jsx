@@ -6,13 +6,12 @@ const Footer = () => {
       <div className='footer-centre'>
         <section className='rights-section'>
           <p className='rights-sentence'>
-            {' '}
-            all rights reserved to me <br /> please don't touch &#169;{' '}
+            all rights reserved to me <br /> please don't touch &#169;
             <span>{new Date().getFullYear()}</span>{' '}
           </p>
         </section>
         <section className='address-section'>
-          <address>
+          <address className='address'>
             You can contact author at
             {/* <a href='http://www.somedomain.com/contact'> www.somedomain.com</a>. */}
             <br />

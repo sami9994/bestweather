@@ -2,18 +2,17 @@
 .current-main-section {
   border-radius: 20px;
   margin: 0 auto;
-  width: 75%;
+  width: 100%;
   display: grid;
   background: rgba(243, 228, 228, 0.6823529412);
   height: 100%;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr, 3);
 }
 .current-main-section .icon-desc {
   grid-row: 1/-1;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  border-right: 1px solid rgb(245, 210, 13);
+  grid-template-columns: 1fr 2fr;
 }
 .current-main-section .icon-desc .current-icon {
   justify-self: center;
@@ -36,13 +35,12 @@
   align-self: center;
   justify-self: flex-start;
 }
-.current-main-section .icon-desc .current-desc-main .current-main {
-  font-size: large;
-}
 .current-main-section .city-date-time {
   padding: 0.2em 0.9em;
-  grid-column: 2/-1;
+  grid-column: 1/-1;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid rgb(245, 210, 13);
   border-bottom: 1px solid rgb(245, 210, 13);
 }
 .current-main-section .city-date-time .current-city {
@@ -52,6 +50,7 @@
 }
 .current-main-section .city-date-time .current-date,
 .current-main-section .city-date-time .current-time {
+  align-self: center;
   justify-self: end;
   font-size: small;
   font-weight: bold;
@@ -60,14 +59,14 @@
   color: rgb(0, 68, 255);
 }
 .current-main-section .humidity-wind-temp {
-  grid-column: 2/-1;
+  grid-column: 1/-1;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
 }
 .current-main-section .humidity-wind-temp .current-temp, .current-main-section .humidity-wind-temp .current-humidity, .current-main-section .humidity-wind-temp .current-wind {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: -moz-fit-content;
   height: fit-content;
@@ -77,4 +76,86 @@
 }
 .current-main-section .humidity-wind-temp .blue {
   color: blue;
+}
+
+@media screen and (min-width: 480px) {
+  .current-main-section {
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 75%;
+    display: grid;
+    background: rgba(243, 228, 228, 0.6823529412);
+    height: 100%;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+  }
+  .current-main-section .icon-desc {
+    grid-row: 1/-1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-right: 1px solid rgb(245, 210, 13);
+  }
+  .current-main-section .icon-desc .current-icon {
+    justify-self: center;
+    align-self: center;
+    min-width: 20px;
+    width: 3em;
+    max-width: 54px;
+    height: auto;
+  }
+  .current-main-section .icon-desc .current-desc-main {
+    justify-self: center;
+    align-self: self-start;
+  }
+  .current-main-section .icon-desc .current-desc-main .current-desc, .current-main-section .icon-desc .current-desc-main .current-main {
+    font-size: small;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: "Edu QLD Beginner", cursive;
+    color: rgb(231, 84, 4);
+    align-self: center;
+    justify-self: flex-start;
+  }
+  .current-main-section .icon-desc .current-desc-main .current-main {
+    font-size: large;
+  }
+  .current-main-section .city-date-time {
+    padding: 0.2em 0.9em;
+    grid-column: 2/-1;
+    display: grid;
+    border-top: none;
+  }
+  .current-main-section .city-date-time .current-city {
+    font-size: 1.2em;
+    justify-self: center;
+    font-family: "Edu QLD Beginner", cursive;
+    border-top: none;
+  }
+  .current-main-section .city-date-time .current-date,
+  .current-main-section .city-date-time .current-time {
+    justify-self: end;
+    font-size: small;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: "Edu QLD Beginner", cursive;
+    color: rgb(0, 68, 255);
+  }
+  .current-main-section .humidity-wind-temp {
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .current-main-section .humidity-wind-temp .current-temp, .current-main-section .humidity-wind-temp .current-humidity, .current-main-section .humidity-wind-temp .current-wind {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+  }
+  .current-main-section .humidity-wind-temp .icon, .current-main-section .humidity-wind-temp .current-wind, .current-main-section .humidity-wind-temp .current-temp, .current-main-section .humidity-wind-temp .current-humidity {
+    color: rgb(231, 84, 4);
+  }
+  .current-main-section .humidity-wind-temp .blue {
+    color: blue;
+  }
 }/*# sourceMappingURL=current.css.map */

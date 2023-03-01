@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: rgb(240, 235, 235);
+  height: 100%;
 }
 a {
   text-decoration: none;

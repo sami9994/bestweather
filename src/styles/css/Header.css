@@ -2,18 +2,21 @@
 .header-section {
   background-color: rgba(250, 171, 1, 0.664);
   width: 100%;
+  min-width: 300px;
   height: 4em;
-  max-height: 52px;
+  max-height: 60px;
 }
 .header-section .main-header {
   background: rgba(223, 214, 214, 0.644);
-  margin: auto;
-  padding-top: 0.1em;
+  margin-inline: auto;
   width: 85vw;
-  height: 80%;
+  min-width: 300px;
+  height: 100%;
   display: flex;
+  border-radius: 5px;
+  align-content: center;
   justify-content: space-around;
-  align-items: baseline;
+  align-items: center;
 }
 .header-section .main-header .title {
   color: white;
@@ -22,10 +25,11 @@
   justify-content: center;
 }
 .header-section .main-header .title .title-header {
-  font-size: 1em;
+  font-size: 0.8em;
 }
 .header-section .search-field {
-  width: 30%;
+  width: 60%;
+  min-width: 250px;
 }
 .header-section .search-field .search-form {
   display: flex;
@@ -53,16 +57,66 @@
   outline: none;
 }
 .header-section .search-field .search-form .input-search-field::-moz-placeholder {
-  padding-left: 2px;
+  padding-left: 1px;
+  font-size: smaller;
   color: rgb(245, 210, 13);
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.5px;
 }
 .header-section .search-field .search-form .input-search-field::placeholder {
-  padding-left: 2px;
+  padding-left: 1px;
+  font-size: smaller;
   color: rgb(245, 210, 13);
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.5px;
+}
+
+@media screen and (min-width: 480px) {
+  .header-section {
+    height: 4em;
+    max-height: 80px;
+  }
+  .header-section .main-header {
+    width: 85vw;
+    max-width: 500px;
+    display: flex;
+  }
+  .header-section .main-header .title .title-header {
+    font-size: 1em;
+  }
+  .header-section .search-field {
+    width: 60%;
+  }
+  .header-section .search-field .search-form {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-section {
+    height: 4em;
+    max-height: 80px;
+  }
+  .header-section .main-header {
+    width: 85vw;
+    max-width: 800px;
+    display: flex;
+  }
+  .header-section .main-header .title .title-header {
+    font-size: 1.1em;
+  }
+  .header-section .search-field {
+    width: 50%;
+    max-width: 500px;
+  }
+  .header-section .search-field .search-form {
+    display: flex;
+  }
+  .header-section .search-field .search-form .input-search-field::-moz-placeholder {
+    font-size: medium;
+  }
+  .header-section .search-field .search-form .input-search-field::placeholder {
+    font-size: medium;
+  }
 }/*# sourceMappingURL=Header.css.map */

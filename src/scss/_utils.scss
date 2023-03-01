@@ -14,13 +14,17 @@ $secondary-bg: rgba(56, 130, 143, 0.336);
 $main-transition: all 0.6s 0.3s linear;
 $letter-space: 0.5px;
 $main-width: 85vw;
+$min-width: 300px;
+
 $edu-font: 'Edu QLD Beginner', cursive;
 $font-color-yellow: rgb(231, 84, 4);
 $font-date-color: rgb(0, 68, 255);
+$border-radios: 5px;
 @mixin scrollbar {
   &::-webkit-scrollbar {
-    width: thin;
+    width: 10px;
     display: block;
+    scrollbar-width: thin;
   }
   &::-webkit-scrollbar-track {
     background-color: $bg;
@@ -28,7 +32,34 @@ $font-date-color: rgb(0, 68, 255);
 
   &::-webkit-scrollbar-thumb {
     background-color: $yellow;
-    border-radius: 0.8em;
+    border-radius: 0.5em;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+}
+$breakPoints: (
+  's': '0px',
+  'm': '480px',
+  'l': '768px',
+  'xl': '1200px',
+);
+
+@mixin s {
+  @media screen and (min-width: map-get($breakPoints ,'s')) {
+    @content;
+  }
+}
+@mixin m {
+  @media screen and (min-width: map-get($breakPoints ,'m')) {
+    @content;
+  }
+}
+@mixin l {
+  @media screen and (min-width: map-get($breakPoints ,'l')) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (min-width: map-get($breakPoints ,'xl')) {
+    @content;
   }
 }

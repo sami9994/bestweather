@@ -3,12 +3,7 @@ import '../styles/css/current.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDrupal } from '@fortawesome/free-brands-svg-icons'
-import {
-  faTemperatureHalf,
-  faTemperatureArrowUp,
-  faTemperatureArrowDown,
-  faWind,
-} from '@fortawesome/free-solid-svg-icons'
+import { faTemperatureHalf, faWind } from '@fortawesome/free-solid-svg-icons'
 import currentRes from '../currentRes'
 import calcDate from '../utils'
 const Current = () => {

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
+.hour-content-main-div {
+  display: flex;
+  border: rgb(245, 210, 13) solid 1px;
+  margin-inline: auto;
+  margin-top: 0.1em;
+  padding: 1px 2px;
+  background-color: rgb(243, 247, 245);
+  font-size: small;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 480px) {
+  .hour-content-main-div {
+    display: flex;
+    border: rgb(245, 210, 13) solid 1px;
+    margin-left: 10px;
+    padding: 1px 2px;
+    flex-direction: column;
+    background-color: rgb(243, 247, 245);
+    font-size: small;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .hour-content-main-div:first-child {
+    margin-left: 1em;
+  }
+  .hour-content-main-div:last-child {
+    margin-right: 2px;
+  }
+}/*# sourceMappingURL=HourlyContentCard.css.map */

@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
+.main-map {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+}
+.main-map .map-content {
+  width: 85vw;
+  margin: 0 auto;
+}/*# sourceMappingURL=map.css.map */
