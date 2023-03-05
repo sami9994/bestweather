@@ -105,8 +105,10 @@
 @include m {
   .card-content {
     border-radius: 20px;
-    width: 15rem;
+    width: 18rem;
+    max-width: 400px;
     height: 20rem;
+    max-height: max-content;
     background-color: rgb(243, 247, 245);
     margin-left: 0.5em;
 

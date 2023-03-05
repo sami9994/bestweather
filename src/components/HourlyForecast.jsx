@@ -12,9 +12,6 @@ for (let index = 0; index < res.hourly.time.length; index++) {
   }
 }
 const HourlyForecast = () => {
-  // console.log(arr)
-  let arr2 = arr.slice(0, 3)
-  console.log(arr2)
   return (
     <div className='hourly-forecast'>
       <div className='hourly-forecast-main-div'>

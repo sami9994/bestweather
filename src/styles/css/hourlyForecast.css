@@ -31,7 +31,7 @@
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 540px) {
   .hourly-forecast {
     margin: 1em auto;
     width: 100%;

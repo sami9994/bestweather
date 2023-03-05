@@ -1,16 +1,19 @@
 import axios from 'axios'
+import { useState } from 'react'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/header'
 import MainContent from './components/MainContent'
-import MapContent from './components/MapContent'
+let date = new Date()
+let toDay = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+
 const options = {
   method: 'GET',
   url: 'https://meteostat.p.rapidapi.com/stations/hourly',
   params: {
     station: '10637',
-    start: '2020-01-01',
-    end: '2020-01-01',
+    start: '2023-03-05',
+    end: '2023-03-05',
     tz: 'Europe/Berlin',
   },
   headers: {
@@ -19,6 +22,11 @@ const options = {
   },
 }
 function App() {
+  let d = new Intl.DateTimeFormat('en-us', {
+    dateStyle: 'medium',
+  })
+  console.log(toDay)
+  const [hours, setHours] = useState([])
   //   //five days
   // axios
   //   .get(
@@ -37,7 +45,9 @@ function App() {
   // axios
   //   .request(options)
   //   .then(function (response) {
-  //     console.log(response.data)
+  //     // console.log(response)
+  //     setHours([...response.data.data])
+  //     console.log(hours)
   //   })
   //   .catch(function (error) {
   //     console.error(error)

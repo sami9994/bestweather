@@ -14,7 +14,7 @@
   max-width: 300px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 540px) {
   .hour-content-main-div {
     display: flex;
     border: rgb(245, 210, 13) solid 1px;

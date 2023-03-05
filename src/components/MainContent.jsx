@@ -4,7 +4,7 @@ import '../styles/css/main-content.css'
 import Card from './Card'
 import response from '../5res'
 import HourlyForecast from './HourlyForecast'
-const MainContent = () => {
+const MainContent = ({ hours }) => {
   return (
     <div className='main-div'>
       <div className='main-content'>

@@ -97,12 +97,8 @@
 }
 @include m {
   .current-main-section {
-    border-radius: 20px;
-    margin: 0 auto;
+    max-width: 600px;
 
-    width: 75%;
-    display: grid;
-    background: #f3e4e4ae;
     height: 100%;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 3fr;
