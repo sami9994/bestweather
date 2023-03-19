@@ -78,7 +78,7 @@
   color: blue;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 660px) {
   .current-main-section {
     max-width: 600px;
     height: 100%;
@@ -88,7 +88,7 @@
   .current-main-section .icon-desc {
     grid-row: 1/-1;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
     border-right: 1px solid rgb(245, 210, 13);
   }
   .current-main-section .icon-desc .current-icon {

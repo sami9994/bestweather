@@ -2,10 +2,16 @@ import React from 'react'
 import Current from './Current'
 import '../styles/css/main-content.css'
 import Card from './Card'
-import response from '../5res'
 import HourlyForecast from './HourlyForecast'
-const MainContent = ({ hours }) => {
-  return (
+import { useAppContext } from '../context/globalContext'
+import Loading from './Loading'
+const MainContent = ({}) => {
+  let { resData, isLoading } = useAppContext()
+  console.log(isLoading)
+  let { forecast } = resData
+  return isLoading ? (
+    <Loading />
+  ) : (
     <div className='main-div'>
       <div className='main-content'>
         <section className='current-details'>
@@ -15,15 +21,8 @@ const MainContent = ({ hours }) => {
           <HourlyForecast />
         </section>
         <section className='daily-section'>
-          {response.list.map((item) => {
-            return (
-              <Card
-                item={item}
-                sunrise={response.city.sunrise}
-                sunset={response.city.sunset}
-                key={item.dt}
-              />
-            )
+          {forecast.forecastday.map((item) => {
+            return <Card item={item} key={item.date_epoch} />
           })}
         </section>
       </div>

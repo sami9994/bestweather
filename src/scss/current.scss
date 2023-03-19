@@ -106,7 +106,7 @@
     .icon-desc {
       grid-row: 1 / -1;
       display: grid;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
 
       border-right: 1px solid $yellow;
       .current-icon {

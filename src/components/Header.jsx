@@ -1,9 +1,11 @@
 import React from 'react'
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
-import CloudSyncIcon from '@mui/icons-material/CloudSync'
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm'
 import '../styles/css/Header.css'
+import { useAppContext } from '../context/globalContext'
 const Header = () => {
+  let { handleChange, handleSubmit } = useAppContext()
+
   return (
     <div className='header-section'>
       <div className='main-header'>
@@ -12,16 +14,16 @@ const Header = () => {
           <ThunderstormIcon />
         </section>
         <section className='search-field'>
-          <form className='search-form'>
+          <form className='search-form' onSubmit={handleSubmit}>
             <input
               type='text'
               placeholder='Search City'
-              onChange={() => console.log('city search')}
+              onChange={handleChange}
               className='input-search-field'
               min={'2'}
               required
             />
-            <button className='search-btn' type='submit'>
+            <button className='search-btn'>
               <SearchOutlinedIcon />
             </button>
           </form>

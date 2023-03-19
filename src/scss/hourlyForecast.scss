@@ -12,7 +12,7 @@
     overflow-x: auto;
     width: 100%;
     height: 100%;
-    // justify-content: center;
+    justify-content: space-between;
     background-color: $white-1;
     border-radius: 5px;
     border-top: solid $yellow 0.5px;
@@ -25,7 +25,7 @@
     margin: 1em auto;
 
     width: 100%;
-    height: 20vh;
+    height: 15vh;
 
     .hourly-forecast-main-div {
       display: flex;
@@ -33,10 +33,10 @@
       margin-inline: auto;
       padding: 0.2em 0;
       overflow-x: auto;
-      width: 100%;
+      width: max-content;
       max-width: 866px;
+      min-width: 400px;
       height: 100%;
-
       border-radius: 5px;
       border-top: solid $yellow 0.5px;
       border-bottom: solid $yellow 0.5px;

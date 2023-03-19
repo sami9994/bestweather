@@ -73,7 +73,7 @@
   letter-spacing: 0.5px;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 660px) {
   .header-section {
     height: 4em;
     max-height: 80px;

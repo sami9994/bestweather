@@ -14,7 +14,7 @@
   max-width: 300px;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 660px) {
   .hour-content-main-div {
     display: flex;
     border: rgb(245, 210, 13) solid 1px;
@@ -27,6 +27,9 @@
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
+    width: 6em;
+    height: auto;
+    max-width: 200px;
   }
   .hour-content-main-div:first-child {
     margin-left: 1em;

@@ -1,22 +1,20 @@
 import React from 'react'
 import HourContent from './HourContentCard'
 import '../styles/css/hourlyForecast.css'
-import res from '../hourlyres'
-console.log(res.hourly.time.length)
-console.log(res.hourly.temperature_2m.length)
-let arr = []
-for (let index = 0; index < res.hourly.time.length; index++) {
-  arr[index] = {
-    time: res.hourly.time[index],
-    temp: res.hourly.temperature_2m[index],
-  }
-}
+
+import { useAppContext } from '../context/globalContext'
+
 const HourlyForecast = () => {
+  let { hr, resData } = useAppContext()
+
+  let { forecast } = resData
   return (
     <div className='hourly-forecast'>
       <div className='hourly-forecast-main-div'>
-        {arr.map((elem, i) => {
-          return <HourContent elem={elem} key={i} />
+        {forecast.forecastday[0].hour.map((elem, i) => {
+          if (hr <= Number(elem.time.split(' ')[1].slice(0, 2))) {
+            return <HourContent elem={elem} key={i} />
+          }
         })}
       </div>
     </div>

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500;600&display=swap");
+.loading {
+  text-align: center;
+  height: 90svh;
+}
+.loading .loading-section {
+  margin: 5em auto;
+  width: 100px;
+  color: rgb(245, 210, 13);
+  font-weight: bold;
+  height: 100px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 7em auto;
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes loading {
+  0% {
+    border-top: 2px solid rgb(245, 210, 13);
+  }
+  25% {
+    border-right: 2px solid rgb(245, 210, 13);
+  }
+  50% {
+    border-bottom: 2px solid rgb(245, 210, 13);
+  }
+  75% {
+    border-left: 2px solid rgb(245, 210, 13);
+  }
+}/*# sourceMappingURL=loading.css.map */

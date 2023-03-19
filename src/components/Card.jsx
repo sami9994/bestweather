@@ -7,57 +7,64 @@ import {
   faTemperatureHalf,
   faVialCircleCheck,
   faGaugeSimpleHigh,
-  faCircleChevronDown,
+  faAnglesUp,
+  faDroplet,
 } from '@fortawesome/free-solid-svg-icons'
 import { faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
-const Card = ({ item, sunrise, sunset }) => {
-  let date = calcDate(item.dt).replace(' ', '')
+import { useAppContext } from '../context/globalContext'
+const Card = ({ item }) => {
+  let { hr } = useAppContext()
+
+  let { day, date, astro, hour } = item
+  let { avgtemp_c, maxwind_kph, avghumidity, condition, maxtemp_c } = day
+  let humidity = hour.filter((item) => {
+    return hr === Number(item.time.slice(-5, -3))
+  })
   return (
     <div className='card-content'>
       <div className='card-main-content'>
         <section className='icon-main-desc'>
-          <img
-            src={`../../icons/different/${item.weather[0].icon}.png`}
-            alt='icon'
-            className='icon'
-          />
+          <img src={`${condition.icon}`} alt='icon' className='icon' />
           <section className='main-desc-date'>
-            <h1 className='main-title'>{item.weather[0].main}</h1>
+            <h1 className='main-title'>{condition.text}</h1>
 
-            <p className='main-desc'>{item.weather[0].description}</p>
+            {/* <p className='main-desc'>{}</p> */}
             <p className='main-date'>{date}</p>
           </section>
         </section>
         <section className='humidity-temp'>
           <section className='temp'>
             <FontAwesomeIcon icon={faTemperatureHalf} />
-            <p>{item.main.temp}C</p>
+            <p>{maxtemp_c}C</p>
           </section>
           <section className='temp-like'>
             <FontAwesomeIcon icon={faVialCircleCheck} />
-            <p>{item.main.feels_like}C</p>
+            <p>{avgtemp_c}C</p>
           </section>
           <section className='humidity'>
             <FontAwesomeIcon icon={faDrupal} />
-            <p>{item.main.humidity}%</p>
+            <p>{avghumidity}%</p>
           </section>
         </section>
         <section className='wind-sunrise'>
           <section className='wind icon'>
             <h4>
-              <FontAwesomeIcon icon={faGaugeSimpleHigh} /> {item.wind.speed}KM
+              <FontAwesomeIcon icon={faGaugeSimpleHigh} /> {maxwind_kph} {' KM'}
+              <br />
+              <FontAwesomeIcon icon={faAnglesUp} /> {humidity[0].wind_degree}{' '}
+              {humidity[0].wind_dir}
             </h4>
             <h4>
               {' '}
-              <FontAwesomeIcon icon={faCircleChevronDown} /> {item.wind.deg}
+              <FontAwesomeIcon icon={faDroplet} /> {humidity[0].humidity}%
             </h4>
           </section>
           <section className='sunrise'>
             <p>
-              <FontAwesomeIcon icon={faSun} /> {calcDate(sunrise).split(',')[1]}
+              <FontAwesomeIcon icon={faSun} /> {astro.sunrise}
             </p>
             <p>
-              <FontAwesomeIcon icon={faMoon} /> {calcDate(sunset).split(',')[1]}
+              <FontAwesomeIcon icon={faMoon} /> {astro.moonrise}
             </p>
           </section>
         </section>
