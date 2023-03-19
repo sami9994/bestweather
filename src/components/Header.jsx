@@ -3,7 +3,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined'
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm'
 import '../styles/css/Header.css'
 import { useAppContext } from '../context/globalContext'
-const Header = () => {
+const HeaderSection = () => {
   let { handleChange, handleSubmit } = useAppContext()
 
   return (
@@ -33,4 +33,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderSection
