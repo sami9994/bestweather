@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
   }
   let doSearch = async (city) => {
     let res = await axios.get(
-      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`
     )
 
     if (res.status === 200) {
