@@ -14,10 +14,17 @@
     border-radius: 50%;
     margin: 7em auto;
     animation-name: loading;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: normal;
   }
+  .loading-word {
+    color: $yellow;
+    letter-spacing: 2px;
+    font-size: larger;
+    font-weight: bolder;
+  }
+
   @keyframes loading {
     0% {
       border-top: 2px solid $yellow;
