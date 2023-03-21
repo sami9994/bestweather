@@ -24,7 +24,6 @@ const AppProvider = ({ children }) => {
     )
 
     if (res.status === 200) {
-      console.log(res)
       let forecastData = res.data
       setResData(forecastData)
       setIsLoading(false)

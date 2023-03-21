@@ -7,7 +7,6 @@ import { useAppContext } from '../context/globalContext'
 import Loading from './Loading'
 const MainContent = ({}) => {
   let { resData, isLoading } = useAppContext()
-  console.log(isLoading)
   let { forecast } = resData
   return isLoading ? (
     <Loading />
