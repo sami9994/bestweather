@@ -6,14 +6,14 @@
   width: 100%;
   display: grid;
   background: #f3e4e4ae;
-  height: 100%;
+  height: max-content;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(1fr, 3);
 
   .icon-desc {
     grid-row: 1 / -1;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
 
     .current-icon {
       justify-self: center;
@@ -26,9 +26,9 @@
     }
     .current-desc-main {
       justify-self: center;
-      align-self: self-start;
+      align-self: center;
       .current-desc {
-        font-size: small;
+        font-size: medium;
         font-weight: bold;
         text-transform: capitalize;
         font-family: $edu-font;
@@ -42,12 +42,11 @@
     }
   }
   .city-date-time {
-    padding: 0.2em 0.9em;
+    padding: 0.1em 0.5em;
     grid-column: 1/-1;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    // justify-content: center;
-    // align-content: center;
+
     border-top: 1px solid $yellow;
     border-bottom: 1px solid $yellow;
     .current-city {
@@ -70,28 +69,32 @@
   .humidity-wind-temp {
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
 
     align-items: center;
     .current-humidity {
       @extend .current-temp;
     }
-    .current-wind {
-      @extend .current-temp;
-      @extend .icon;
-    }
+
     .current-temp {
       @extend .icon;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      height: fit-content;
+      min-height: fit-content;
+      height: 2em;
+      max-height: 45px;
     }
     .icon {
       color: $font-color-yellow;
     }
     .blue {
       color: blue;
+    }
+    .current-wind {
+      @extend .current-temp;
+      @extend .icon;
+      color: red;
     }
   }
 }

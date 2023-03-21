@@ -2,13 +2,13 @@
 .hourly-forecast {
   margin: 1em auto;
   width: 100%;
-  height: 20vh;
-
+  height: fit-content;
+  height: 18vh;
   .hourly-forecast-main-div {
     display: flex;
     flex-direction: column;
     margin: 0 0.1em;
-    padding: 0.1em 0;
+    padding: 0.2em 0;
     overflow-x: auto;
     width: 100%;
     height: 100%;
