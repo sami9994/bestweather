@@ -14,29 +14,67 @@
     border-radius: 50%;
     margin: 7em auto;
     animation-name: loading;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
+    animation-fill-mode: backwards;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
     animation-direction: normal;
   }
   .loading-word {
+    margin-inline: auto;
+
     color: $yellow;
     letter-spacing: 2px;
     font-size: larger;
     font-weight: bolder;
+    width: fit-content;
+    animation: loading-word-animation 4s ease-in-out infinite normal forwards;
   }
 
   @keyframes loading {
-    0% {
-      border-top: 2px solid $yellow;
-    }
     25% {
-      border-right: 2px solid $yellow;
+      border-right: 2px solid green;
     }
     50% {
-      border-bottom: 2px solid $yellow;
+      border-bottom: 4px dotted red;
     }
     75% {
-      border-left: 2px solid $yellow;
+      border-left: 2px solid blue;
+    }
+    100% {
+      border-top: 4px dotted $yellow;
+    }
+  }
+  @keyframes loading-word-animation {
+    0% {
+      opacity: 0.2;
+      transform: rotate(45deg);
+      color: red;
+      scale: 0.8;
+    }
+    25% {
+      opacity: 0.5;
+      transform: rotate(0deg);
+      color: blue;
+      scale: 0.9;
+    }
+    50% {
+      opacity: 0.9;
+      transform: rotate(-45deg);
+      color: green;
+      scale: 1.2;
+    }
+    75% {
+      opacity: 0.5;
+      transform: rotate(0deg);
+      color: yellow;
+      scale: 0.9;
+    }
+    100% {
+      opacity: 0.2;
+      transform: rotate(45deg);
+      color: red;
+      scale: 0.8;
     }
   }
 }
